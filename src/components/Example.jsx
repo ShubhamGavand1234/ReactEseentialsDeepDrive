@@ -1,6 +1,7 @@
 import { EXAMPLES } from "../data";
 import TabButton from "./TabButton";
 import { useState } from "react";
+import Section from "./Section";
 
 export default function Example() {
   const [tabContent, setTabContent] = useState("");
@@ -23,8 +24,8 @@ export default function Example() {
     );
   }
   return (
-    <section id="examples">
-      <h2>Examples</h2>
+    <Section title="Examples" id="examples">
+      {/* <h2>Examples</h2> */}
       <menu>
         <TabButton
           isSelected={tabContent === "component"}
@@ -62,6 +63,6 @@ export default function Example() {
 
       {/* {!tabContent ? <p>Please Select a topic</p> : null} */}
       {tabDisplayContent}
-    </section>
+    </Section>
   );
 }
